@@ -13,4 +13,28 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-accent);
+  font-weight: var(--font-accent-weight);
+  color: var(--text-color);
+  min-block-size: 327px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.header__title {
+  font-size: clamp(49px, 43.37px + 1.5vw, 65px);
+}
+
+.header__text {
+  font-size: clamp(14px, 10.83px + 0.85vw, 23px);
+  padding-top: 20px;
 }
