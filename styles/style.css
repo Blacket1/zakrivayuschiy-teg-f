@@ -14,7 +14,10 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-main);
-  margin: 0 auto;
+  font-weight: var(--font-text-weight);
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -27,6 +30,13 @@
   color: var(--text-color);
   min-block-size: 327px;
   text-transform: uppercase;
+  margin: 100px auto;
+  border: 2px solid var(--text-color);
+}
+
+.variable-calc {
+  width: var(--variable-width);
+  
   background-color: #fff;
 }
 
@@ -38,3 +48,90 @@
   font-size: clamp(14px, 10.83px + 0.85vw, 23px);
   padding-top: 20px;
 }
+
+/*фильтры на картинки*/
+.filter-first {
+  filter: grayscale(100%);
+}
+
+.filter-second {
+  filter: hue-rotate(280deg) saturate(250%) contrast(120%);
+}
+
+.filter-third {
+  filter: hue-rotate(240deg) saturate(180%) drop-shadow(0 0 5px rgba(255, 0, 255, 0.3));
+}
+
+.filter-fourth {
+  filter: sepia(100%) hue-rotate(60deg) saturate(120%) brightness(0.9) contrast(0.8);
+}
+
+.filter-fifth {
+  filter: sepia(100%) contrast(1.1) brightness(0.9);
+}
+
+.filter-sixth {
+  filter: blur(8px) saturate(1.2) brightness(0.9);
+}
+
+.filter-seventh {
+   filter: sepia(100%) hue-rotate(-50deg) brightness(0.9) contrast(0.85);
+}
+
+.card-list {
+  margin: auto;
+}
+
+.card {
+  margin-bottom: 50px;
+  border: 2px solid var(--text-color);
+}
+
+.card__title {
+  font-weight: var(--font-title-weight);
+  color: var(--text-color);
+  font-size: var(--title-font-size);
+  margin: 4px 10px;
+}
+
+.card__text {
+  margin: 25px;
+}
+
+.card__image-container {
+  position: relative;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__lable {
+  position: absolute;
+  inset: 25px 25px auto auto;
+  mix-blend-mode: hard-light;
+  font-family: var(--font-accent);
+  font-weight: var(--font-accent-weight);
+  font-size: var(--main-font-size);
+  text-transform: uppercase;
+  text-shadow: 
+    -1px -1px 0 var(--stroke-color),  
+     1px -1px 0 var(--stroke-color),
+    -1px  1px 0 var(--stroke-color),
+     1px  1px 0 var(--stroke-color);
+  opacity: 0.5;
+}
+
+@supports (-webkit-text-stroke: 1px var(--stroke-color)) {
+  .card__lable {
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-shadow: none; 
+  }
+}
+
+.button__text {
+  font-family: var(--font-accent);
+  font-weight: var(--font-accent-weight);
+  font-size: var(--main-font-size);
+}
+

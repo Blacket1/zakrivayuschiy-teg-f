@@ -6,4 +6,15 @@
     --font-title-weight: 715;
     --font-text-weight: 410;
     --text-color: #000;
+    --variable-width: clamp(375px, 260.45px + 30.55vw, 700px);
+     --bg-gradient: 
+    /*Вертикальные полоски*/
+    repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    /*Горизонтальные полоски*/
+    repeating-linear-gradient(180deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    /*цветовой переход*/
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+    --title-font-size: 18px;
+    --main-font-size: 14px;
+    --stroke-color: #fff;
 }
