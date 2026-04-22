@@ -211,12 +211,11 @@
     <dialog class="footer__modal" id="footer-modal">
 
       <div class="floppy-disk__container">
-        <svg width="39" height="39" style="color: black;">
+        <svg width="39" height="39">
           <use xlink:href="#floppy-disk" />
         </svg>
         <p class="floppy-disk__text button__text">Вставьте<br> дискету, чтобы<br> продолжить</p>
       </div>
-
 
       <button class="footer__button" type="button" onclick="window['footer-modal'].close()">
         <span class="button__text">OK</span>
@@ -225,7 +224,7 @@
     </dialog>
     <button class="footer__button" type="button" onclick="window['footer-modal'].showModal()"
       aria-controls="footer-modal">
-      <svg class="floppy-disk" width="28" height="28" style="color: black;">
+      <svg class="floppy-disk" width="28" height="28">
         <use xlink:href="#floppy-disk" />
       </svg>
       <span class="button__text">Сохранить на память</span>

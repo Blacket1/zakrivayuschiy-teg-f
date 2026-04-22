@@ -17,4 +17,7 @@
     --title-font-size: 18px;
     --main-font-size: 14px;
     --stroke-color: #fff;
+     /* Переменные для управления цветами */
+    --btn-text-color: #fff;
+    --btn-bg-color: #000;
 }
