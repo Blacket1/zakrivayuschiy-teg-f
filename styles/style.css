@@ -103,18 +103,34 @@
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  padding: 0;
   border: 2px solid transparent;
+  background-color: transparent;
   transition: border-color 0.3s ease;
+  cursor: pointer;
+  margin-right: 12px;
 }
+
+
 .card__icon-button:focus-visible {
   border-color: var(--btn-bg-color);
   outline: none;
 }
 
 .like-icon {
-  width: 27px;
-  height: 24px;
-  border: none;
+  display: block;
+  width: 39px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.like-icon .heart {
+  transform-origin: center center;
 }
 
 .like-container {
@@ -264,6 +280,77 @@ dialog::backdrop {
 
 .card__like-button:hover::before, .footer__button:hover::before {
   transform: scaleX(1); 
+}
+
+/* --- БАЗОВЫЕ ПЕРЕХОДЫ (СОСТОЯНИЕ ПО УМОЛЧАНИЮ) --- */
+
+/* Контур: быстрый возврат цвета при снятии лайка */
+.like-icon .contour {
+  transition: fill 0.1s linear;
+}
+
+/* Сердцевина: плавное исчезновение с задержкой 0.03s */
+.like-icon .core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+/* Основное тело: плавное исчезновение без задержки */
+.like-icon .main-body {
+  transition: fill 0.3s linear;
+}
+
+/* --- СОСТОЯНИЕ :hover (НАВЕДЕНИЕ) --- */
+
+.like-icon:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear; /* задержка убрана */
+}
+
+.like-icon:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear 0.05s; /* задержка 0.05s */
+}
+
+/* --- СОСТОЯНИЕ :active (НАЖАТИЕ) --- */
+
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* --- СОСТОЯНИЕ .is-liked (КЛИК - ЛАЙК) --- */
+
+/* Сердцевина */
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+/* Основное тело */
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Контур закрашивается с задержкой 0.06s */
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+/* Масштабирование сердца */
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s 1;
+}
+
+/* Вспышка искр */
+.like-icon.is-liked .sparks {
+  animation: sparks-flash 0.3s ease-in 0.3s 1;
 }
 
 
