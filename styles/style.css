@@ -232,6 +232,7 @@ dialog:not([open]) {
 dialog {
   display: flex;
   flex-direction: column;
+  min-block-size: 191px;
   padding: 30px 40px;
   gap: 20px;
   border: 2px solid var(--text-color);
@@ -358,6 +359,10 @@ dialog::backdrop {
 
 
 @media (width >=768px) {
+  .header {
+    min-block-size: 368px;
+  }
+  
   .footer__button {
     flex-direction: row;
     min-width: 291px;
