@@ -13,11 +13,12 @@
   <link rel="icon" href="./svg/Favicon/favicon.png" sizes="any">
   <link rel="icon" href="./svg/Favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./svg/Favicon/favicon.ico">
+  <link rel="preload" href="./images/floppy-disk.svg" as="image">
 </head>
 
 <body class="page">
   <header class="header variable-calc">
-    <h1 class="header__title">&lt;/html&gt</h1>
+    <h1 class="header__title">&lt;/html&gt;</h1>
     <p class="header__text">закрывающий тег</p>
   </header>
 
@@ -27,8 +28,8 @@
       <li class="card">
         <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="card__image-container">
-          <img src="./images/Pixel-Bus/bus-original.jpg" alt="Пиксельное изображение фургона" class="card__image">
-          <p class="card__lable">&lt;/html&gt</p>
+          <img src="./images/Pixel-Bus/bus-original.jpg" alt="Пиксельное изображение фургона" class="card__image" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться
           на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
@@ -37,7 +38,7 @@
           <button class="card__icon-button" type="button" aria-label="лайк">
 
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -65,7 +66,7 @@
 
           </button>
 
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -76,8 +77,8 @@
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__image-container">
           <img src="./images/Pixel-Bus/bus-original.jpg"
-            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-first">
-          <p class="card__lable">&lt;/html&gt</p>
+            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-grayscale" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички.
           Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за
@@ -87,7 +88,7 @@
         <div class="like-container">
           <button class="card__icon-button" type="button">
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -113,7 +114,7 @@
               </g>
             </svg>
           </button>
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -123,8 +124,8 @@
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__image-container">
           <img src="./images/Pixel-Bus/bus-original.jpg"
-            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-second">
-          <p class="card__lable">&lt;/html&gt</p>
+            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-hue-rotate" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть
           и смениться ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
@@ -132,7 +133,7 @@
         <div class="like-container">
           <button class="card__icon-button" type="button">
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -158,7 +159,7 @@
               </g>
             </svg>
           </button>
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -168,8 +169,8 @@
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__image-container">
           <img src="./images/Pixel-Bus/bus-original.jpg"
-            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-third">
-          <p class="card__lable">&lt;/html&gt</p>
+            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-hue-rotate-shadow" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё
           впереди. Вы могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не
@@ -178,7 +179,7 @@
         <div class="like-container">
           <button class="card__icon-button" type="button">
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -204,7 +205,7 @@
               </g>
             </svg>
           </button>
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -214,8 +215,8 @@
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__image-container">
           <img src="./images/Pixel-Bus/bus-original.jpg"
-            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-fourth">
-          <p class="card__lable">&lt;/html&gt</p>
+            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-sepia-warm" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против
           целого мира). Вас окружали одногруппники, команда сопровождения и просто близкие люди, которым можно
@@ -225,7 +226,7 @@
         <div class="like-container">
           <button class="card__icon-button" type="button">
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -251,7 +252,7 @@
               </g>
             </svg>
           </button>
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -261,8 +262,8 @@
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__image-container">
           <img src="./images/Pixel-Bus/bus-original.jpg"
-            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-fifth">
-          <p class="card__lable">&lt;/html&gt</p>
+            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-sepia-contrast" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться,
           что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.</p>
@@ -270,7 +271,7 @@
         <div class="like-container">
           <button class="card__icon-button" type="button">
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -296,7 +297,7 @@
               </g>
             </svg>
           </button>
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -306,8 +307,8 @@
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__image-container">
           <img src="./images/Pixel-Bus/bus-original.jpg"
-            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-sixth">
-          <p class="card__lable">&lt;/html&gt</p>
+            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-blur" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и
           проектную пора сдавать, и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В
@@ -316,7 +317,7 @@
         <div class="like-container">
           <button class="card__icon-button" type="button">
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -342,7 +343,7 @@
               </g>
             </svg>
           </button>
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -352,8 +353,8 @@
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__image-container">
           <img src="./images/Pixel-Bus/bus-original.jpg"
-            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-seventh">
-          <p class="card__lable">&lt;/html&gt</p>
+            alt="Пиксельное изображение фургона с разными цветовыми фильтрами" class="card__image filter-sepia-cool" loading="lazy">
+          <span class="card__lable">&lt;/html&gt;</span>
         </div>
         <p class="card__text">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё
           много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый
@@ -363,7 +364,7 @@
         <div class="like-container">
           <button class="card__icon-button" type="button">
             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <g class="heart">
                 <!-- КОНТУР -->
                 <path class="contour"
@@ -389,7 +390,7 @@
               </g>
             </svg>
           </button>
-          <button class="card__like-button" type="button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -398,49 +399,31 @@
     </ul>
   </main>
 
-  <footer class="footer">
-    <dialog class="footer__modal" id="footer-modal">
+  <div class="dialog-container">
 
+    <dialog class="dialog__modal" id="dialog-modal">
+      
       <div class="floppy-disk__container">
         <svg width="39" height="39">
-          <use xlink:href="#floppy-disk" />
+          <use xlink:href="./images/floppy-disk.svg#floppy-disk" />
         </svg>
-        <p class="floppy-disk__text button__text">Вставьте<br> дискету, чтобы<br> продолжить</p>
+        <p class="floppy-disk__text">Вставьте дискету, чтобы продолжить</p>
       </div>
 
-      <button class="footer__button" type="button" onclick="window['footer-modal'].close()">
+      <button class="dialog__button button" type="button" onclick="window['dialog-modal'].close()">
         <span class="button__text">OK</span>
       </button>
 
     </dialog>
-    <button class="footer__button" type="button" onclick="window['footer-modal'].showModal()"
-      aria-controls="footer-modal">
+
+    <button class="dialog__button button save-button" type="button" onclick="window['dialog-modal'].showModal()"
+      aria-controls="dialog-modal">
       <svg class="floppy-disk" width="28" height="28">
-        <use xlink:href="#floppy-disk" />
+        <use xlink:href="./images/floppy-disk.svg#floppy-disk" />
       </svg>
       <span class="button__text">Сохранить на память</span>
     </button>
-  </footer>
-
-  <!-- svg картинка флоппи диска -->
-  <svg style="display: none;">
-    <symbol id="floppy-disk" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill="currentColor"
-        d="M0 0h1.615v1.615H0zm0 1.615h1.615V3.23H0zM0 3.23h1.615v1.615H0zm0 1.616h1.615v1.615H0zm0 1.616h1.615v1.615H0zm0 1.615h1.615v1.615H0zm0 1.615h1.615v1.615H0zm0 1.616h1.615v1.615H0zm0 1.615h1.615v1.615H0zm0 1.615h1.615v1.615H0zm0 1.616h1.615v1.615H0zm0 1.616h1.615v1.615H0zm0 1.615h1.615V21H0zM17.77 0v1.615h-1.616V0zm-1.616 0v1.615h-1.615V0zm-1.615 0v1.615h-1.615V0zm-1.616 0v1.615h-1.615V0zm-1.615 0v1.615H9.693V0zM9.692 0v1.615H8.077V0zM8.077 0v1.615H6.462V0zM6.462 0v1.615H4.847V0zM4.846 0v1.615H3.231V0zM3.23 0v1.615H1.617V0zm16.155 1.616V3.23H17.77V1.616zM4.847 3.23v1.615H3.232V3.23zm-.001-1.615V3.23H3.231V1.615zm0 3.231V6.46H3.23V4.846zM16.154 3.23v1.616H14.54V3.23zm0-1.615V3.23h-1.615V1.615zm-.001 3.231V6.46H14.54V4.846zM12.924 3.23v1.615h-1.615V3.23zm-.001-1.615V3.23h-1.615V1.615zm0 3.231V6.46h-1.615V4.846zm3.231 1.616v1.615h-1.615V6.462zm-1.616 0v1.615h-1.615V6.462zm-1.615 0v1.615h-1.615V6.462zm-1.615 0v1.615H9.693V6.462zm-1.616 0v1.615H8.077V6.462zm-1.615 0v1.615H6.462V6.462zm-1.616 0v1.615H4.846V6.462zm-1.615 0v1.615H3.231V6.462zm12.923 4.845v1.615h-1.615v-1.615zm-1.616.001v1.615h-1.615v-1.615z"""
-        ) />>
-      <path fill="currentColor"
-        d="M14.538 11.308v1.615h-1.615v-1.615zm-1.615 0v1.614h-1.615v-1.615zm-1.616 0v1.615H9.692v-1.615zm-1.615-.001v1.615H8.077v-1.615zm-1.616.001v1.615H6.461v-1.615zm-1.615 0v1.615H4.846v-1.615zm-1.615-.001v1.615H3.23v-1.615zm12.924 1.616v1.615h-1.616v-1.615zm-12.924 0v1.615H3.231v-1.615z"""
-        ) />>
-      <path fill="currentColor"
-        d="M17.77 14.538v1.615h-1.616v-1.615zm-12.924 0v1.615H3.231v-1.615zm12.924 1.616v1.615h-1.615v-1.615zm-12.924 0v1.615H3.231v-1.615zm0 1.616v1.614H3.23V17.77zm12.923 0v1.614h-1.615V17.77zm1.615 1.615V21H17.77v-1.615zm-1.614-.001V21h-1.616v-1.615zm-1.616.001V21h-1.615v-1.615zm-1.616 0V21h-1.615v-1.615zm-1.615 0V21h-1.615v-1.615zm-1.616 0V21H9.692v-1.615zm-1.615 0V21H8.077v-1.615zm-1.615 0V21H6.462v-1.615zm-1.616 0V21H4.846v-1.615zm-1.615 0V21H3.231v-1.615zm-1.616 0V21H1.617v-1.615zM21 21h-1.615v-1.615H21zm0-1.615h-1.615V17.77H21zm0-1.616h-1.615v-1.615H21z"""
-        ) />>
-      <path fill="currentColor"
-        d="M21 16.155h-1.615V14.54H21zm0-1.617h-1.615v-1.615H21zm0-1.615h-1.615v-1.615H21zm0-1.616h-1.615V9.692H21z"""
-        ) />>
-      <path fill="currentColor"
-        d="M21 9.693h-1.615V8.078H21zm0-1.616h-1.615V6.462H21zm0-1.615h-1.615V4.847H21zm0-1.617h-1.615V3.23H21z""" ) />>
-    </symbol>
-  </svg>
+  </div>
 
   <script src="./scripts/like.js"></script>
 </body>

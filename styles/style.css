@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-main);
-  font-weight: var(--font-text-weight);
+  font-variation-settings: 'wght' var(--font-text-weight);
   background-image: var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -50,45 +50,47 @@
 }
 
 /*фильтры на картинки*/
-.filter-first {
+.filter-grayscale {
   filter: grayscale(100%);
 }
 
-.filter-second {
+.filter-hue-rotate {
   filter: hue-rotate(280deg) saturate(250%) contrast(120%);
 }
 
-.filter-third {
+.filter-hue-rotate-shadow {
   filter: hue-rotate(240deg) saturate(180%) drop-shadow(0 0 5px rgba(255, 0, 255, 0.3));
 }
 
-.filter-fourth {
+.filter-sepia-warm {
   filter: sepia(100%) hue-rotate(60deg) saturate(120%) brightness(0.9) contrast(0.8);
 }
 
-.filter-fifth {
+.filter-sepia-contrast {
   filter: sepia(100%) contrast(1.1) brightness(0.9);
 }
 
-.filter-sixth {
+.filter-blur {
   filter: blur(8px) saturate(1.2) brightness(0.9);
 }
 
-.filter-seventh {
+.filter-sepia-cool {
   filter: sepia(100%) hue-rotate(-50deg) brightness(0.9) contrast(0.85);
 }
 
 .card-list {
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .card {
   margin-bottom: 50px;
   border: 2px solid var(--text-color);
+  background-color: white;
 }
 
 .card__title {
-  font-weight: var(--font-title-weight);
+  font-variation-settings: 'wght' var(--font-title-weight);
   color: var(--text-color);
   font-size: var(--title-font-size);
   padding: 4px 10px;
@@ -119,10 +121,12 @@
   margin-right: 6px;
 }
 
+.card__icon-button:focus {
+  outline: none;
+}
 
 .card__icon-button:focus-visible {
   border-color: var(--btn-bg-color);
-  outline: none;
 }
 
 .like-icon {
@@ -188,41 +192,45 @@
   font-size: var(--main-font-size);
 }
 
-.footer {
+.dialog-container {
   display: flex;
   justify-content: center;
   padding-bottom: 100px;
 }
 
-.footer__modal {
+.dialog__modal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 341px;
+  box-sizing: border-box;
 }
-
-
 
 .floppy-disk__container {
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 341px;
+  width: 100%;
 }
 
-.footer__button {
+.dialog__button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--text-color);
-  min-width: 261px;
+  width: 100%;
   gap: 8px;
-  padding: 17px 20px;
+  padding: 10px 20px;
 }
 
 .floppy-disk__text {
   line-height: 150%;
   text-transform: uppercase;
+  max-width: 202px;
+  width: 100%;
+  font-family: var(--font-accent);
+  font-weight: var(--font-accent-weight);
+  font-size: var(--main-font-size);
 }
 
 dialog:not([open]) {
@@ -230,26 +238,13 @@ dialog:not([open]) {
 }
 
 dialog {
-  display: flex;
-  flex-direction: column;
-  min-block-size: 191px;
   padding: 30px 40px;
-  gap: 20px;
+  gap: 30px;
   border: 2px solid var(--text-color);
 }
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-}
-
-.card__like-button, 
-.footer__button {
-  transition: box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  background-color: #fff; 
-  cursor: pointer;
-  border-style: solid;
 }
 
 .button__text,
@@ -261,13 +256,34 @@ dialog::backdrop {
   mix-blend-mode: difference;
 }
 
-.card__like-button:focus, 
-.footer__button:focus {
+.button {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  cursor: pointer;
+  border: 2px solid var(--text-color);
+  transition: box-shadow 0.3s ease;
+  font-family: var(--font-accent);
+  font-weight: var(--font-accent-weight);
+  font-size: var(--main-font-size);
+}
+
+.save-button {
+  padding: 17px 20px;
+  max-width: 306px;
+}
+
+/*стиль фокуса для всех кнопок */
+.button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0 #000;
 }
 
-.card__like-button::before, .footer__button::before {
+/*псевдоэлемент для анимации заливки */
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -281,9 +297,9 @@ dialog::backdrop {
   transform-origin: left;
 }
 
-
-.card__like-button:hover::before, .footer__button:hover::before {
-  transform: scaleX(1); 
+/*ховер-эффект для анимации заливки */
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 /* --- БАЗОВЫЕ ПЕРЕХОДЫ (СОСТОЯНИЕ ПО УМОЛЧАНИЮ) --- */
@@ -363,18 +379,21 @@ dialog::backdrop {
     min-block-size: 368px;
   }
   
-  .footer__button {
+  .dialog__button {
     flex-direction: row;
-    min-width: 291px;
+    width: 100%;
   }
 
   dialog {
     padding: 30px 30px;
-    gap: 30px;
   }
 
+  .dialog__modal {
+    min-width: 353px;
+}
+
   .floppy-disk__container {
-    max-width: 353px;
+    width: 100%;
   }
 
   .floppy-disk {
