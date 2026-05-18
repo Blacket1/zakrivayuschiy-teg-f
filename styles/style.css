@@ -209,6 +209,7 @@
 .floppy-disk__container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   width: 100%;
 }
@@ -271,6 +272,12 @@ dialog::backdrop {
 .save-button {
   padding: 17px 20px;
   max-width: 306px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.save-button .button__text {
+  white-space: nowrap;
 }
 
 /*стиль фокуса для всех кнопок */
@@ -384,6 +391,10 @@ dialog::backdrop {
     width: 100%;
   }
 
+  .save-button {
+    max-width: 335px;
+  }
+
   dialog {
     padding: 30px 30px;
   }
@@ -394,6 +405,7 @@ dialog::backdrop {
 
   .floppy-disk__container {
     width: 100%;
+    justify-content: start;
   }
 
   .floppy-disk {
